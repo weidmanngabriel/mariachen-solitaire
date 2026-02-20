@@ -29,6 +29,10 @@ Dieses Projekt enthält ein browserbasiertes Single-Page-Spiel "Worditaire" in r
 - Extras:
   - Button `Neues Spiel`.
   - Win-Check: gewonnen, wenn Stock + Waste + Tableau leer sind.
+- Nachträglicher UI-Wunsch:
+  - Design moderner gestalten (ruhigere Oberflächen, klarere Kontraste, zeitgemäße Flächen/Stati).
+  - Schriftgrößen insgesamt erhöhen.
+  - Auf gute Lesbarkeit der Farben achten (ausreichender Kontrast zwischen Hintergrund, Karte und Text).
 
 ## Prozess-Hinweis für nachfolgende Agenten
 - Diese Datei bei Änderungen an Anforderungen/Interpretation aktualisieren.
