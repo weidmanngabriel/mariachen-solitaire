@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Worditaire</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-wrap">
+    <header class="topbar">
+      <h1>Worditaire</h1>
+      <button id="newGameBtn" type="button">Neues Spiel</button>
+    </header>
+
+    <section class="top-area">
+      <div class="pile-area">
+        <button id="stock" class="pile" type="button">Stock</button>
+        <button id="waste" class="pile" type="button">Waste</button>
+      </div>
+      <div id="foundations" class="foundations" aria-label="Foundations"></div>
+    </section>
+
+    <section id="tableau" class="tableau" aria-label="Tableau"></section>
+
+    <footer class="statusbar">
+      <div id="statusText">Lade Theme…</div>
+    </footer>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
