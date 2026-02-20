@@ -1,4 +1,5 @@
-const THEME_PATH = 'themes/jahreszeiten.json';
+const APP_VERSION = '20260220b';
+const THEME_PATH = `themes/jahreszeiten.json?v=${APP_VERSION}`;
 const FOUNDATION_SLOTS = 5;
 const TABLEAU_COLUMNS = 7;
 const TABLEAU_BASE = 2;
@@ -67,7 +68,7 @@ async function startGame() {
 
 async function loadTheme(path) {
   try {
-    const res = await fetch(path);
+    const res = await fetch(path, { cache: 'no-store' });
     if (!res.ok) return null;
     return await res.json();
   } catch {

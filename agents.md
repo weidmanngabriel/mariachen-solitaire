@@ -33,6 +33,9 @@ Dieses Projekt enthält ein browserbasiertes Single-Page-Spiel "Worditaire" in r
   - Design moderner gestalten (ruhigere Oberflächen, klarere Kontraste, zeitgemäße Flächen/Stati).
   - Schriftgrößen insgesamt erhöhen.
   - Auf gute Lesbarkeit der Farben achten (ausreichender Kontrast zwischen Hintergrund, Karte und Text).
+- Deployment/Update-Verhalten:
+  - Cache-Busting für `style.css`, `game.js` und Theme-JSON verwenden (Versions-Query), damit Safari/iPad nach Updates zuverlässig neue Assets lädt.
+  - Zusätzlich No-Cache-Meta-Tags in `index.html` setzen, um manuelles Leeren des Browser-Caches zu minimieren.
 
 ## Prozess-Hinweis für nachfolgende Agenten
 - Diese Datei bei Änderungen an Anforderungen/Interpretation aktualisieren.
