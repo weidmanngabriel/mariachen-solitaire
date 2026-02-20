@@ -1,0 +1,222 @@
+:root {
+  --bg: #0f172a;
+  --bg-2: #111f3d;
+  --surface: rgba(255, 255, 255, 0.08);
+  --surface-strong: rgba(255, 255, 255, 0.14);
+  --card: #fefefe;
+  --card-border: #1f2937;
+  --root-bg: #ecf5ff;
+  --root-border: #1d4ed8;
+  --text: #0f172a;
+  --text-soft: #e8edf8;
+  --accent: #f59e0b;
+  --valid: #22c55e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: radial-gradient(circle at 20% 10%, #1b2d54, var(--bg)) fixed;
+  color: #fff;
+}
+
+.game-wrap {
+  min-height: 100vh;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 1.55rem;
+  letter-spacing: 0.02em;
+}
+
+button {
+  min-height: 46px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--text);
+  font-size: 1.08rem;
+  font-weight: 600;
+}
+
+#newGameBtn {
+  background: linear-gradient(180deg, #ffffff, #dbeafe);
+}
+
+.top-area {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.pile-area {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(96px, 1fr));
+  gap: 8px;
+}
+
+.pile {
+  width: 100px;
+  height: 126px;
+  border-radius: 12px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(17, 31, 61, 0.88), rgba(11, 20, 39, 0.9));
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  font-size: 1.03rem;
+}
+
+.pile.selected {
+  outline: 3px solid var(--accent);
+}
+
+.foundations {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.foundation-slot {
+  width: 128px;
+  height: 126px;
+  background: var(--surface);
+  border: 2px dashed rgba(255, 255, 255, 0.65);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.foundation-slot.valid-target { outline: 3px solid var(--valid); }
+.foundation-slot.selected { outline: 3px solid var(--accent); }
+
+.foundation-header {
+  padding: 4px 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #f8fbff;
+  background: rgba(5, 10, 22, 0.45);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  min-height: 22px;
+}
+
+.foundation-body {
+  flex: 1;
+  position: relative;
+  padding: 4px;
+}
+
+.foundation-progress {
+  position: absolute;
+  right: 4px;
+  bottom: 2px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #f8fbff;
+  background: rgba(5, 10, 22, 0.65);
+  border-radius: 5px;
+  padding: 1px 5px;
+}
+
+.tableau {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+  align-items: start;
+}
+
+.tableau-column {
+  min-height: 270px;
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 12px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  position: relative;
+  padding: 4px;
+}
+
+.tableau-column.valid-target { outline: 3px solid var(--valid); }
+.tableau-column.selected { outline: 3px solid var(--accent); }
+
+.card {
+  width: 100%;
+  height: 108px;
+  border-radius: 11px;
+  border: 2px solid var(--card-border);
+  background: var(--card);
+  color: var(--text);
+  position: absolute;
+  left: 0;
+  padding: 7px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.card.root {
+  background: var(--root-bg);
+  border-width: 3px;
+  border-color: var(--root-border);
+}
+
+.card.facedown {
+  background: linear-gradient(135deg, #d9e3f4, #bfcde6);
+  border-color: #64748b;
+  color: #334155;
+}
+
+.card-title,
+.card-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-title {
+  display: none;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.12rem;
+  font-weight: 600;
+}
+
+.card-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.card.topcard .card-title { display: flex; }
+.card.topcard .card-label { display: none; }
+
+.statusbar {
+  margin-top: auto;
+  min-height: 30px;
+  font-size: 1.05rem;
+  color: var(--text-soft);
+}
+
+@media (max-width: 980px) {
+  .tableau { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}

@@ -1,0 +1,15 @@
+{
+  "theme": "10 Kategorien (Text)",
+  "groups": [
+    { "id": "jahreszeiten", "name": "Jahreszeiten", "items": ["Frühling", "Sommer", "Herbst", "Winter"] },
+    { "id": "farben", "name": "Farben", "items": ["Rot", "Blau", "Grün", "Gelb"] },
+    { "id": "obst", "name": "Obst", "items": ["Apfel", "Birne", "Banane", "Pflaume"] },
+    { "id": "tiere", "name": "Tiere", "items": ["Hund", "Katze", "Pferd", "Fuchs"] },
+    { "id": "berufe", "name": "Berufe", "items": ["Arzt", "Lehrerin", "Bäcker", "Tischler"] },
+    { "id": "instrumente", "name": "Instrumente", "items": ["Klavier", "Gitarre", "Flöte", "Geige"] },
+    { "id": "sportarten", "name": "Sportarten", "items": ["Fußball", "Tennis", "Judo", "Rudern"] },
+    { "id": "laender", "name": "Länder", "items": ["Deutschland", "Kanada", "Japan", "Chile"] },
+    { "id": "getraenke", "name": "Getränke", "items": ["Wasser", "Tee", "Kaffee", "Saft"] },
+    { "id": "werkzeuge", "name": "Werkzeuge", "items": ["Hammer", "Säge", "Zange", "Bohrer"] }
+  ]
+}
